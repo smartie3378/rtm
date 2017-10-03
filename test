@@ -1,2 +1,22 @@
-dfsadfasdf
-asdfsdasdf
+(		  due:today 
+	OR	startBefore:tommorrow
+	OR 	(
+        (		priority:1 
+				 OR priority:2
+         ) 
+		    AND (   dueBefore:tomorrow 
+				     OR due:never
+             )
+		   )
+ ) 
+NOT 	  isSubtask:true
+     OR list:ar_wohnung
+     OR	list:ar_einkaufen
+     OR list:rs
+     OR (     tag:job 
+		     AND 	(priority:2 
+               OR	priority:3
+               OR priority:none
+               )
+  	     )
+         
